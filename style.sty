@@ -1,2 +1,26 @@
 % Add required packages here.
-\usepackage{xcolor}
+
+% Enables colored text.
+\usepackage[dvipsnames]{xcolor}
+
+% Enable code listings.
+\usepackage{listings}
+% Adjust listing config.
+\lstset{
+language=python,
+aboveskip=3mm,
+belowskip=3mm,
+showstringspaces=false,
+columns=flexible,
+basicstyle={\small\ttfamily},
+numbers=left,
+numberstyle=\tiny\color{gray},
+keywordstyle=\color{blue},
+commentstyle=\color{SeaGreen},
+stringstyle=\color{PineGreen},
+breaklines=true,
+breakatwhitespace=true,
+tabsize=3,
+frame=L,
+}
+
