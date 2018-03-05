@@ -34,7 +34,56 @@ In order to include images, you need the graphicx package. The environment \text
 \label{fig:lighthouse}
 \end{figure}
 
+\section{Tables}
+The tabular environment can be used to create tables. The second argument contains the table spec, which specifies the alignment of each column and the vertical lines. Besides some other specs, the table \ref{table:specs}.
 
+\begin{table}[h]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+l & left-justified column \\ \hline
+c & centered column \\ \hline
+r & right-justified column\\ 
+\hline
+\end{tabular}
+\caption{table specs.}
+\label{table:specs}
+\end{table}
+
+Another example of a table using different alignments and alternating row colors, see table \ref{table:alignment}. 
+
+\begin{table}[ht]
+\rowcolors{1}{gray!25}{white}
+\centering
+\begin{tabular}{ l | r | c }
+\rowcolor{gray!40}
+left & right & center  \\ \hline\hline
+1 & 2 & 3 \\ \hline
+11 & 22 & 33 \\ \hline
+11,1 & 22,2 & 33,3 \\ 
+\end{tabular}
+\caption{table alignments and alternating row colors.}
+\label{table:alignment}
+\end{table} 
+
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+For further possibilities to modify tables, see WikiBooks resource.
+
+\section{Mathematical expressions}
+Mathematical equations and expressions can be displayed inline using the math environment or its shorthand \textbackslash(...\textbackslash) (e.g. \( 3*x = 7 \)). Or as displayed formulas using either the displaymath environment (shorthand \textbackslash[...\textbackslash]) or the equation environment, which automatically numbers the equation.
+
+\begin{figure}[h]
+\[ \int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x \]
+\caption{Equation using the displaymath environment shorthand.}
+\label{fig:integral}
+\end{figure}
+
+The equation \ref{fig:numbered} is numbered and labeled in order to refer to it. This is the recommended style.
+
+\begin{equation}
+\lim_{x \to \infty} \exp(-x) = 0
+\label{fig:numbered}
+\end{equation}
 
 
 
